@@ -13,7 +13,7 @@ module.exports = [
   ...compat.extends(
     "eslint:recommended",
     "plugin:@typescript-eslint/recommended",
-    "prettier"
+    "prettier",
   ),
   {
     files: ["**/*.{js,ts}"],

@@ -9,10 +9,10 @@
     "preview": "vite preview",
     "prepare": "husky install",
     "format": "prettier --write .",
-    "lint": "eslint . --ext .js,.ts,.html"
+    "lint": "eslint -c ./eslint.config.cjs . --ext .js,.ts"
   },
   "lint-staged": {
-    "*.{js,ts,html,css}": [
+    "*.{js,ts,css}": [
       "npm run format",
       "npm run lint"
     ]
@@ -20,8 +20,14 @@
   "devDependencies": {
     "@commitlint/cli": "^19.8.1",
     "@commitlint/config-conventional": "^19.8.1",
+    "@eslint/eslintrc": "^3.3.1",
+    "@eslint/js": "^9.14.0",
+    "@typescript-eslint/eslint-plugin": "^8.41.0",
+    "@typescript-eslint/parser": "^8.41.0",
     "autoprefixer": "^10.4.21",
     "eslint": "^9.34.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-html": "^8.1.3",
     "husky": "^9.1.7",
     "lint-staged": "^16.1.5",
     "postcss": "^8.5.6",
